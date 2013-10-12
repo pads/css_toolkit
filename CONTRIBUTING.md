@@ -2,8 +2,8 @@
 
 First of all, **thank you** for contributing to this library!
 
-## Issues 
-Please file issues on the [GitHub issues list](https://github.com/meducation/udp2sqs-client/issues) and give as much detail as possible.
+## Issues
+Please file issues on the [GitHub issues list](https://github.com/meducation/css_toolkit/issues) and give as much detail as possible.
 
 ## Features / Pull Requests
 

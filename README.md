@@ -1,39 +1,30 @@
-# udp2sqs-client
+# The Meducation CSS Toolkit
 
-Client for the udp2sqs-server.  See also [udp2sqs-server](https://github.com/meducation/udp2sqs-server)
-
-[![Build Status](https://travis-ci.org/meducation/udp2sqs-client.png)](https://travis-ci.org/meducation/udp2sqs-client)
-[![Dependencies](https://gemnasium.com/meducation/udp2sqs-client.png?travis)](https://gemnasium.com/meducation/udp2sqs-client)
-[![Code Climate](https://codeclimate.com/github/meducation/udp2sqs-client.png)](https://codeclimate.com/github/meducation/udp2sqs-client)
-[![Coverage Status](https://coveralls.io/repos/meducation/udp2sqs-client/badge.png)](https://coveralls.io/r/meducation/udp2sqs-client)
-
+The Meducation CSS Toolkit provides the base layer for the CSS used on all Meducation projects.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'udp2sqs-client'
-
-If you want to use the latest version from Github, you can do:
-
-    gem 'udp2sqs-client', github: "meducation/udp2sqs-client"
+    gem 'css_toolkit', github: "meducation/css_toolkit"
 
 And then execute:
 
     $ bundle
 
-In your code you can then send messages by:
+In your `app/assets/stylesheet.css` you can then add:
 
-```
-client = Udp2sqsClient::Client.new(host, port)
-client.send_message("Some message")
-```
+    *= require css_toolkit
 
 ## Contributing
 
 Firstly, thank you!! :heart::sparkling_heart::heart:
 
-Please read our [contributing guide](https://github.com/meducation/udp2sqs-client/tree/master/CONTRIBUTING.md) for information on how to get stuck in.
+Please read our [contributing guide](https://github.com/meducation/css_toolkit/tree/master/CONTRIBUTING.md) for information on how to get stuck in.
+
+## Credits
+
+This library is built on [PureCSS](http://purecss.io/). It is designed by the incredbily talented [Taiyab Raja](http://taiyab.co.uk).
 
 ## Licence
 
@@ -49,5 +40,5 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Affero General Public License for more details.
 
-A copy of the GNU Affero General Public License is available in [Licence.md](https://github.com/meducation/udp2sqs-client/blob/master/LICENCE.md)
+A copy of the GNU Affero General Public License is available in [Licence.md](https://github.com/meducation/css_toolkit/blob/master/LICENCE.md)
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
