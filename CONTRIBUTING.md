@@ -7,11 +7,13 @@ Please file issues on the [GitHub issues list](https://github.com/meducation/css
 
 ## Features / Pull Requests
 
-If you want a feature implemented, the best way to get it done is to submit a pull request that implements it. Please make sure it has tests.
+If you want to make a change, the best way to get it done is to submit a pull request that implements it.
 
-You can run the tests with
+There is an embedded Rails app preloaded with toolkit elements. You can view it by running:
+
 ```
-rake test
+cd /PATH_TO_THIS_FILE/test/dummy
+rails s
 ```
 
 If you've not contributed to a repository before - this is the accepted pattern to use:
