@@ -19,4 +19,37 @@
         %a.pure-button.pure-button-action Action Button
     .pure-u-1-4.l-box
         %a.pure-button.pure-button-disabled Disabled Button
-Hello!
+
+%h3 Menu
+.pure-menu.pure-menu-open.pure-menu-horizontal
+    %ul
+        %li
+            %a{href:"#"} Home
+        %li.pure-menu-selected
+            %a{href:"#"} Flickr
+        %li
+            %a{href:"#"} Messenger
+        %li
+            %a{href:"#"} Sports
+        %li
+            %a{href:"#"} Finance
+
+%h3 Input
+
+%h4 Text Fields
+%form.pure-form
+    %fieldset
+        .pure-g
+            .pure-u-1-4.l-box
+                %input{type:'email'}
+            .pure-u-1-4.l-box
+                %input{type:'email'}
+            .pure-u-1-4.l-box
+                %input{type:'email'}
+            .pure-u-1-4.l-box
+                %input{type:'email'}
+
+        .pure-g
+            .pure-u-3-4.l-box
+                %textarea
+
