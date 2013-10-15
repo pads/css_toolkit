@@ -2,8 +2,23 @@
 *=require pure-min
 */
 
+/* Typography Variables */
+
 $font-size: 1em;
 $line-height: $font-size * 1.618;
+$letter-spacing: 0px;
+
+/* Color/Branding Variables */
+
+$white: #ffffff;
+$black: #000000;
+
+$blue1: #252e39;
+$blue2: #6594ce;
+$blue3: #4ea1ff;
+
+$gray1: #eaebef;
+
 
 body,
 .pure-g [class *= "pure-u"],
@@ -12,133 +27,69 @@ body,
     font-family: 'museo-sans', Helvetica, sans-serif;
 }
 
-body {
+body, html {
+    height: 100%;
+    min-height: 100%;
     font-weight: 300;
     font-size: $font-size;
     line-height: $line-height;
-    color: #2b2c2f;
+    letter-spacing: $letter-spacing;
+    background-color: #f4f8fa;
 }
 
-/* Page Typography */
-h2 {
-    font-size: 2em;
-    background-color: #f2f2f2;
-    padding: 46px 0 32px 48px;
-    border-bottom: 1px solid #dfdfdf;
+.pure-g, .pure-g-r {
+    height: 100%;
+    min-height: 100%;
 }
 
-h3 {
-    font-size: 1.5em;
-    padding: 20px 0 20px 0;
-    border-bottom: 1px solid #e8e8e8;
-}
+/* Sidebar CSS */
 
-p {
-    letter-spacing: 0px;
-}
-
-/* Layout Styling */
-.pure-g > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.l-box {
-    padding: 1em;
-}
-
-/* Buttons */
-
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
-    border-radius: $radius;
-}
-
-.pure-button {
-    @include border-radius(5px);
-    background-color: #6594ce;
-    /*width: 221px;*/
+#sidebar {
+    background-color: $blue1;
     color: #ffffff;
-    font-weight: 500;
-    text-align: center;
-    padding: 5% 10%;
-        &:hover, &:active {
-        background-color: #5780b3;
-    }
-}
+    overflow: hidden;
+    
+    #menu {
+        background-color: $blue1;
+        border: 0px;
+        padding: 5% 2% 5% 10%;
 
-.pure-button-primary {
-    background-color: #92bc00;
-}
-
-.pure-button-primary a:hover {
-    background-color: #fff;
-}
-
-.pure-button-warning {
-    background-color: #e3c01e;
-}
-
-.pure-button-error {
-    background-color: #e84939;
-}
-
-.pure-button-success {
-    background-color: #66bc00;
-}
-
-.pure-button-info {
-    background-color: #28466d;
-}
-
-.pure-button-action {
-    background-color: #f26522;
-}
-
-.pure-button-disabled {
-    background-color: #a8a8a8;
-}
-
-/* Menu */
-
-.pure-menu.pure-menu-open {
-    @include border-radius(5px);
-    background-color: #6594ce;
-
-    a {
-        color:#fff;
-        &:hover {
-            background-color: #4472a9;
+        h1 {
+            font-weight: 100;
+            padding-bottom: 5%;
         }
+
+        h2 {
+            font-weight: 100;
+            font-size: 1.2em;
+            padding-top: 5%;
+        }
+
+        a {color: #4d6077;}
+        a:hover {
+            background-color: #1e252e;
+            color: #708db1;
+        }
+        a:active {
+            background-color: #1e252e;
+            color: $white;
+        }
+
     }
+
 }
 
-/* Forms */
-
-input {
-    @include border-radius(5px);
-    background-color: #fafafa;
-    padding: 5px;
-    &:focus {
-        background-color: #fff;
+section {
+    padding: 2%;
+    border-bottom: 1px solid #cfd4de;
+    
+    h2 {
+        font-weight: 300;
+        font-size: 2em;
     }
-}
-
-input .inactive {
-    @include border-radius(5px);
-    color: #78828e;
-}
-
-textarea {
-    @include border-radius(5px);
-    &:focus {
-        background-color: #fff;
+    h3 {
+        font-weight: 300;
+        color: #a9bdd4;
     }
-    background-color: #fafafa;
+
 }
-
-
-
