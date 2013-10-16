@@ -19,6 +19,9 @@ $blue3: #4ea1ff;
 
 $gray1: #eaebef;
 
+$success: #66bc00;
+$error: #e84939;
+
 
 body,
 .pure-g [class *= "pure-u"],
@@ -97,8 +100,7 @@ body, html {
 }
 
 section {
-    margin: 0 auto;
-    padding: 0 5%;
+    margin: 0 5%;
     max-width: 800px;
     border-bottom: 1px solid #cfd4de;
 
@@ -131,9 +133,41 @@ h3 {
 
 .pure-button {
     @include border-radius(5px);
-    background-color: #6594ce;
+    background-color: $blue3;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
-    padding: 5% 10%;
+    padding: 2% 5%;
+}
+
+.pure-button-info {
+    background-color: $blue1;
+    }
+
+.pure-button-success {
+    background-color: $success;
+    }
+
+.pure-button-error {
+    background-color: $error;
+    }
+
+.pure-button-action {
+    background-color: #f26522;
+}
+
+.pure-button-warning {
+    background-color: #e3c01e;
+}
+
+.pure-button-disabled {
+    background-color: #a8a8a8;
+}
+
+// Misc.
+
+.code {
+    background-color: #f5f5f5;
+    border: 1px solid #e7e7e7;
+    padding: 5px 10px;
 }
