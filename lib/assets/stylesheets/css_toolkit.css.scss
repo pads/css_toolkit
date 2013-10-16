@@ -2,13 +2,13 @@
 *=require pure-min
 */
 
-/* Typography Variables */
+// Typography Variables
 
 $font-size: 1em;
 $line-height: $font-size * 1.618;
 $letter-spacing: 0px;
 
-/* Color/Branding Variables */
+// Color/Branding Variables
 
 $white: #ffffff;
 $black: #000000;
@@ -23,8 +23,8 @@ $gray1: #eaebef;
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: 'museo-sans', Helvetica, sans-serif;
+    //Set your content font stack here:
+    font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
 }
 
 body, html {
@@ -42,22 +42,17 @@ body, html {
     min-height: 100%;
 }
 
-/* Sidebar CSS */
+// Sidebar CSS
 
-#sidebar {
+.sidebar {
     background-color: $blue1;
     color: #ffffff;
     overflow: hidden;
-    
-    #menu {
-        background-color: $blue1;
-        border: 0px;
-        padding: 5% 2% 5% 10%;
 
-        h1 {
-            font-weight: 100;
-            padding-bottom: 5%;
-        }
+    .menu {
+    background-color: $blue1;
+    border: 0px;
+    padding: 5% 2% 5% 10%;
 
         h2 {
             font-weight: 100;
@@ -79,18 +74,66 @@ body, html {
 
 }
 
+.secondsidebar {
+    background-color: $blue3;
+    color: #ffffff;
+    overflow: hidden;
+
+    .secondmenu {
+    background-color: $blue3;
+    border: 0px;
+    padding: 10% 2% 5% 10%;
+        h1 { font-weight: 100; }
+        h2 {
+            font-weight: 100;
+            font-size: 1.2em;
+        }
+        a {color: #dae8f6;}
+        a:hover {
+            background-color: #4496ec;
+            color: $white;
+        }
+    }
+}
+
 section {
-    padding: 2%;
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 800px;
     border-bottom: 1px solid #cfd4de;
-    
-    h2 {
-        font-weight: 300;
-        font-size: 2em;
-    }
 
-    h3 {
-        font-weight: 300;
-        color: #a9bdd4;
-    }
+}
 
+// Typography
+
+h1 {
+    font-weight: 100;
+    font-size: 3em;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 2em;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+// Buttons
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.pure-button {
+    @include border-radius(5px);
+    background-color: #6594ce;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+    padding: 5% 10%;
 }
