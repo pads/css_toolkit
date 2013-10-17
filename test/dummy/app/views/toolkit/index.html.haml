@@ -46,19 +46,18 @@
     .pure-u-5-8
         %section
             %h2 Base
-            %h3.subheading The Meducation CSS Toolkit based on PureCSS (Yahoo, Inc)
+            %h3 The Meducation CSS Toolkit based on PureCSS (Yahoo, Inc)
             
             %h3 Foundation
-            %p The Meducation CSS Toolkit is based off of PureCSS. Initially it will exist as a 'skin' to Pure which matches the Meducation.net design aesthetic. It will enable developers to go from sketches to rapid prototypes faster, whilst maintaining the same look and feel throughout.
-            %p The CSS Toolkit is a work in progress.
+            %p.med-prominent The Meducation CSS Toolkit is based off of PureCSS. Initially it will exist as a 'skin' to Pure which matches the Meducation.net design aesthetic. It will enable developers to go from sketches to rapid prototypes faster, whilst maintaining the same look and feel throughout.
             
             %h3 Typography
-            
-            %h3 Headings
+            %h4 Headings
             %h1 This is a heading h1
             %h2 This is a heading h2
             %h3 This is a heading h3
             
+            %h4 Unordered Lists
             .pure-u-1-6
                 %h3 Unordered Lists
                 %ul
@@ -86,12 +85,14 @@
                 %dt Definition Term
                 %dd Definition description goes here.
 
-            %h3 Blockquotes
+            %h4 Quotes
             %blockquote This is a blockquote test.
-            %h3 Abbreviations
-            %abbr Abbreviation
-            %h3 Addresses
-            %h3 Inline Styles
+
+            %h4 Code
+            %pre.code
+                :escaped
+                    <html></html>
+
         %section
             %h2 Grids
         %section
@@ -99,17 +100,69 @@
             %h3 Default Form
             %form.pure-form
                 %fieldset
-                    %input{type: 'text', placeholder: 'Name'}
+                    %legend This is a default form.
                     %input{type: 'email', placeholder: 'Email'}
                     %input{type: 'password', placeholder: 'Password'}
-                    %input{type: 'url', placeholder: 'URL'}
-                    %input{type: 'date', placeholder: 'Date'}
-                    %input{type: 'month', placeholder: 'Month'}
-                    %input{type: 'time', placeholder: 'Time'}
-                    %input{type: 'datetime', placeholder: 'Date Time'}
-                    %input{type: 'number', placeholder: 'Number'}
-                    %input{type: 'search', placeholder: 'Search'}
+                    %label{:for => "remember"}
+                        %input{type: 'checkbox'}Remember me
+                    %a.pure-button.med-button-small Sign In
+            %pre.code
+                :escaped
+                    <form class="pure form">
+                        <fieldset>
+                            <legend>This is a defualt form.</legend>
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="url" placeholder="URL">
+                            <label for="remember">
+                                <input type="checkbox">Remember me</input>
+                            <a class="pure-button">Sign In</a>
+                        </fieldset>
+                    </form>
             %h3 Stacked Form
+            %form.pure-form.pure-form-stacked
+                %fieldset
+                    %legend This is a stacked form.
+                    %input{type: 'email', placeholder: 'Email'}
+                    %input{type: 'password', placeholder: 'Password'}
+                    %label{:for => "country"}
+                    %select#state
+                        %option UK
+                        %option US
+                        %option Australia
+
+                    %label{:for => "remember"}
+                        %input{type: 'checkbox'} Remember me
+                    %a.pure-button.medbutton-small Sign In
+                %pre.code
+                    :escaped
+                        <form class="pure-form pure-form-stacked">
+                            <fieldset>
+                                <legend>A Stacked Form</legend>
+
+                                <label for="email">Email</label>
+                                <input id="email" type="email" placeholder="Email">
+
+                                <label for="password">Password</label>
+                                <input id="password" type="password" placeholder="Password">
+
+                                <label for="state">State</label>
+                                <select id="state">
+                                    <option>AL</option>
+                                    <option>CA</option>
+                                    <option>IL</option>
+                                </select>
+
+                                <label for="remember" class="pure-checkbox">
+                                    <input id="remember" type="checkbox"> Remember me
+                                </label>
+
+                                <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                            </fieldset>
+                        </form>
+
+
             %h3 Aligned Form
             %h3 Multi-Column Form
             %h3 Grouped Inputs
@@ -127,12 +180,10 @@
                 :escaped
                     <a class="pure-button">Standard Button</a>
 
-            %aside This is an aside tag used to make notes on the item within the toolkit.
-
-            %a.pure-button.med-button-info Info Button
+            %a.pure-button.med-button-action Action Button
             %pre.code 
                 :escaped
-                    <a class="pure-button.med-button-info">Info Button</a>
+                    <a class="pure-button.med-button-action">Action Button</a>
 
             %a.pure-button.med-button-success Success Button
             %pre.code 
@@ -143,11 +194,6 @@
             %pre.code 
                 :escaped
                     <a class="pure-button.med-button-error">Error Button</a>
-
-            %a.pure-button.med-button-action Action Button
-            %pre.code
-                :escaped 
-                    <a class="pure-button.med-button-action">Action Button</a>
 
             %a.pure-button.med-button-warning Warning Button
             %pre.code 
@@ -182,12 +228,27 @@
                     <a class="pure-button.med-button-xlarge">Extra Large Button</a>
 
             %h3 Buttons with icons
-            %a.pure-button.med-premium
+            %a.pure-button.med-button-action.med-icon-button
                 %i.icon-star
                 Premium
             %pre.code
                 :escaped
-                    <a class="pure-button.med-premium">Premium</a>
+                    <a class="pure-button.med-premium"><i class="icon-star"></i>Premium</a>
+
+            %a.pure-button.med-button-action.med-icon-button
+                %i.icon-cloud-download
+                Download File
+            %pre.code
+                :escaped
+                    <a class="pure-button.med-download"><i class="icon-cloud-download"></i>Download File</a>
+
+            %a.pure-button.med-icon-button
+                %i.icon-book
+                Add to Library
+            %pre.code
+                :escaped
+                    <a class="pure-button.med-addtolibrary"><i class="icon-book"></i>Add to Library</a>
+
 
         %section
             %h2 Tables

@@ -11,6 +11,8 @@ $blue1: #252e39;
 $blue2: #6594ce;
 $blue3: #4ea1ff;
 
+$action: #92bc00;
+
 $gray1: #eaebef;
 
 $success: #66bc00;
@@ -119,6 +121,12 @@ section {
 
 p {}
 
+ .med-prominent {
+        background-color: #ffffeb;
+        border: 1px solid #e9e9d7;
+        padding: 1em 1.5em;
+    }
+
 h1 {
     font-weight: 100;
     font-size: 4.8rem;
@@ -146,13 +154,13 @@ h3 {
     @include border-radius(5px);
     background-color: $blue3;
     color: #ffffff;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
-    padding: 0.8em 1.6em;
+    padding: 0.6em 1.2em;
 }
 
-.med-button-info {
-    background-color: $blue1;
+.med-button-action {
+    background-color: $action;
     }
 
 .med-button-success {
@@ -162,10 +170,6 @@ h3 {
 .med-button-error {
     background-color: $error;
     }
-
-.med-button-action {
-    background-color: #f26522;
-}
 
 .med-button-warning {
     background-color: #e3c01e;
@@ -194,21 +198,43 @@ h3 {
 }
 
 // Buttons with icons
-.med-premium {
-    background-color: #92bc00;
 
+.med-icon-button {
     i {
-        padding-right: 10px;
+        padding-right: 1em;
     }
 }
-
 
 // Forms
 
+// Default Form
+
 .pure-form {
-    input[type=email] {
+    font-size: 1.2em;
+    font-family: 'Proxima Nova', Helvetica, sans-serif;
+}
+
+input {
+    background-color: #fafafa;
+    margin-right: 0.5em;
+    &:focus {
+        background-color: $white;
     }
 }
+
+.pure-form-stacked
+input[type="text"],
+input[type="input"],
+input[type="email"],
+input[type="url"] {
+    margin: 1em 0 0 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+// Stacked Form
 
 
 // Misc.
@@ -218,15 +244,16 @@ h3 {
     background-color: #fafafa;
     border: 1px solid #eeeeee;
     color: #555555;
-    padding: 5px 10px;
-    margin: 15px 0 30px 0;
+    padding: 1.5em 2em;
+    margin: 1.5em 0 3em 0;
     max-width: 800px;
+    font-size: 0.8em;
 }
 
 aside {
     display: block;
     float: right;
-    padding: 10px;
+    padding: 1em;
 }
 
 blockquote {
