@@ -2,13 +2,7 @@
 *=require pure-min
 */
 
-// Typography Variables
-
-$font-size: 1em;
-$line-height: $font-size * 1.618;
-$letter-spacing: 0px;
-
-// Color/Branding Variables
+// General Color Variables
 
 $white: #ffffff;
 $black: #000000;
@@ -22,21 +16,36 @@ $gray1: #eaebef;
 $success: #66bc00;
 $error: #e84939;
 
+    // Base Typography Colors
+    $normal: #181818;
+    $light: #8a8a8a;
+    $really-light: #b6b6b6;
+
+// Control Variables
+$fixed-width: 800px;
+
+html {
+    font-weight: 300;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    letter-spacing: 0px;
+}
 
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
     //Set your content font stack here:
     font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: $normal;
+
+
 }
 
-body, html {
+
+body {
     height: 100%;
     min-height: 100%;
-    font-weight: 300;
-    font-size: $font-size;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
 }
 
 .pure-g, .pure-g-r {
@@ -46,20 +55,21 @@ body, html {
 
 // Sidebar CSS
 
-.sidebar {
+.med-sidebar {
     background-color: $blue1;
     color: #ffffff;
     overflow: hidden;
 
-    .menu {
+    .med-menu {
     background-color: $blue1;
     border: 0px;
     padding: 5% 2% 5% 10%;
 
         h2 {
             font-weight: 100;
-            font-size: 1.2em;
+            font-size: 2rem;
             padding-top: 5%;
+            color: $white;
         }
 
         a {color: #4d6077;}
@@ -76,19 +86,20 @@ body, html {
 
 }
 
-.secondsidebar {
+.med-secondsidebar {
     background-color: $blue3;
     color: #ffffff;
     overflow: hidden;
 
-    .secondmenu {
+    .med-secondmenu {
     background-color: $blue3;
     border: 0px;
     padding: 10% 2% 5% 10%;
         h1 { font-weight: 100; }
         h2 {
             font-weight: 100;
-            font-size: 1.2em;
+            font-size: 2rem;
+            color: $white;
         }
         a {color: #dae8f6;}
         a:hover {
@@ -99,22 +110,23 @@ body, html {
 }
 
 section {
-    margin: 0 5%;
-    max-width: 800px;
+    padding: 0 2%;
     border-bottom: 1px solid #cfd4de;
 
 }
 
 // Typography
 
+p {}
+
 h1 {
     font-weight: 100;
-    font-size: 3em;
+    font-size: 4.8rem;
 }
 
 h2 {
     font-weight: 100;
-    font-size: 2em;
+    font-size: 3.2rem;
 }
 
 h3 {
@@ -139,45 +151,65 @@ h3 {
     padding: 0.8em 1.6em;
 }
 
-.pure-button-info {
+.med-button-info {
     background-color: $blue1;
     }
 
-.pure-button-success {
+.med-button-success {
     background-color: $success;
     }
 
-.pure-button-error {
+.med-button-error {
     background-color: $error;
     }
 
-.pure-button-action {
+.med-button-action {
     background-color: #f26522;
 }
 
-.pure-button-warning {
+.med-button-warning {
     background-color: #e3c01e;
 }
 
-.pure-button-disabled {
+.med-button-disabled {
     background-color: #a8a8a8;
 }
 
-.pure-button-xsmall {
+// Button Sizes
+
+.med-button-xsmall {
     font-size: 70%;
 }
 
-.pure-button-small {
+.med-button-small {
     font-size: 85%;
 }
 
-.pure-button-large {
+.med-button-large {
     font-size: 110%;
 }
 
-.pure-button-xlarge {
+.med-button-xlarge {
     font-size: 125%;
 }
+
+// Buttons with icons
+.med-premium {
+    background-color: #92bc00;
+
+    i {
+        padding-right: 10px;
+    }
+}
+
+
+// Forms
+
+.pure-form {
+    input[type=email] {
+    }
+}
+
 
 // Misc.
 
@@ -188,4 +220,15 @@ h3 {
     color: #555555;
     padding: 5px 10px;
     margin: 15px 0 30px 0;
+    max-width: 800px;
+}
+
+aside {
+    display: block;
+    float: right;
+    padding: 10px;
+}
+
+blockquote {
+    color: $light;
 }
