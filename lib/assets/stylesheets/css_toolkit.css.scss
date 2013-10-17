@@ -29,8 +29,9 @@ $fixed-width: 800px;
 html {
     font-weight: 300;
     font-size: 62.5%;
-    line-height: 1.6rem;
     letter-spacing: 0px;
+    line-height: 1.6rem;
+
 }
 
 body,
@@ -121,20 +122,20 @@ section {
 
     p {}
 
-     .med-prominent {
+    .med-prominent {
             background-color: #ffffeb;
             border: 1px solid #e9e9d7;
             padding: 1em 1.5em;
-        }
+    }
 
     h1 {
         font-weight: 100;
-        font-size: 4.8rem;
+        font-size: 3rem;
     }
 
     h2 {
         font-weight: 100;
-        font-size: 3.6rem;
+        font-size: 2rem;
     }
 
     h3 {
@@ -146,7 +147,7 @@ section {
     background-color: #fafafa;
     border: 1px solid #eeeeee;
     color: #555555;
-    padding: 1.5em 2em;
+    padding: 1em 1.5em;
     margin: 1.5em 0 3em 0;
     max-width: 800px;
     font-size: 0.8em;
