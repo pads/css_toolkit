@@ -15,6 +15,8 @@
                 %a{href: "#"} Tables
                 %li
                 %a{href: "#"} Menus
+                %li
+                %a{href: "#"} Widgets
 
             %h2 Typography
             %ul
@@ -41,10 +43,9 @@
                 %a{href: "#"} Code
 
     .pure-u-3-4
-        %section
+        .med-header
             %h2 Base
-            %h3 The Meducation CSS Toolkit based on PureCSS (Yahoo, Inc)
-            
+        %section
             %h3 Foundation
             %p.med-prominent The Meducation CSS Toolkit is based off of PureCSS. Initially it will exist as a 'skin' to Pure which matches the Meducation.net design aesthetic. It will enable developers to go from sketches to rapid prototypes faster, whilst maintaining the same look and feel throughout.
             
@@ -91,7 +92,26 @@
                     <html></html>
 
             %h4 Text Editor
-            %textarea I like to write comments, drink coffee, and write software. This is the comment I’m making on this resource. I’m commenting because I have something to say about it. I can also use formatting options provided in comments :D
+            .text-editor I like to write comments, drink coffee, and write software. This is the comment I’m making on this resource. I’m commenting because I have something to say about it. I can also use formatting options provided in comments :D
+            .toolbar
+            %ul
+                %li Heading 1
+                %li H2
+                %li H3
+                %li B
+                %li I
+
+
+            %h4 Viewed/Uploaded
+            .med-resource-sidebar-info
+                %i.icon-eye-open
+                Viewed
+                %b 6504
+                times
+            .med-resource-sidebar-info
+                %i.icon-cloud-upload
+                Uploaded about
+                %b 1 year ago
 
         %section
             %h2 Grids
@@ -264,5 +284,3 @@
             %h3 Add Dropdowns to Menus
             %h3 Menus with Disabled Items
             %h3 Pagination
-
-    .pure-u-1-8

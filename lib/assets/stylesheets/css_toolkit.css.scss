@@ -26,6 +26,19 @@ $gray1: #eaebef;
 // Control Variables
 $fixed-width: 800px;
 
+// Mixins
+
+    // Border Radius
+
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+    }
+
+
+
 html {
     font-weight: 300;
     font-size: 62.5%;
@@ -104,16 +117,56 @@ body {
         }
         a {color: #dae8f6;}
         a:hover {
-            background-color: #4496ec;
+            background-color: #4894ea;
             color: $white;
         }
     }
 }
 
+// General
+
+.med-header {
+    padding: 0.5% 2%;
+    background-color: #f3f4f8;
+    border-bottom: 1px solid #e0e2e8;
+
+    h2 {
+        font-size: 4.8rem;
+    }
+}
+
 section {
-    padding: 0 2%;
+    padding: 0 2% 3em 2%;
     border-bottom: 1px solid #cfd4de;
 
+}
+
+.med-resource-sidebar-info {
+    @include border-radius(5px);
+    font-size: 1.4rem;
+    background-color: #f9f9f9;
+    width: 218px;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    border: 1px solid #d3d5db;
+
+    i {
+        padding-right: 0.5em;
+    }
+
+    b {
+        font-weight: 500;
+        color: $blue2;
+    }
+}
+
+.med-resource-big-vote {
+    @include border-radius(5px);
+    background-color: $blue2;
+
+    .vote-up {
+        padding: 3em;
+    }
 }
 
 // Base
@@ -130,17 +183,21 @@ section {
 
     h1 {
         font-weight: 100;
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     h2 {
         font-weight: 100;
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     h3 {
+        margin: 2em 0 1em 0;
         font-weight: 500;
+        font-size: 2rem;
     }
+
+    // Other Stuff
 
     .code {
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
@@ -153,6 +210,24 @@ section {
     font-size: 0.8em;
     }
 
+    .text-editor {
+        @include border-radius(5px);
+        width: 698px;
+        height: 188px;
+        border: 1px solid #d3d5db;
+        padding: 1em;
+
+        .toolbar {
+            height: 46px;
+            border-top: 1px solid #d3d5db;
+
+            ul, li {
+                display: inline;
+                list-style-type: none;
+            }
+        }
+    }
+
     aside {
         display: block;
         float: right;
@@ -161,6 +236,7 @@ section {
 
     blockquote {
         color: $light;
+        padding: 0.5em;
     }
 
 // Grids
@@ -204,13 +280,6 @@ section {
 // Collate all potential icon buttons and append.
 
     // Standard Buttons
-
-    @mixin border-radius($radius) {
-        -webkit-border-radius: $radius;
-        -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-        border-radius: $radius;
-    }
 
     .pure-button {
         @include border-radius(5px);
