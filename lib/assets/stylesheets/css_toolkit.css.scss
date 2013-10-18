@@ -114,10 +114,11 @@
 
     4.  Typography
         4.1.    Base
-        4.2.    Font Selection
-        4.3.    Font Colors
-        4.4.    Line Height
-        4.5.    Character Spacing
+            4.2.1.  Font Selection
+            4.3.2.  Font Colors
+            4.4.3.  Line Height
+            4.5.4.  Character Spacing
+        4.2.    Code Box
 
     5.  Assets
         5.1.    Base
@@ -137,6 +138,10 @@
     Uncategorized */
 
 
+
+// --------------------------------------------
+// ------------>>>   1. Base   <<<-------------
+// --------------------------------------------
 
 html {
     font-weight: 300;
@@ -167,29 +172,19 @@ body {
 }
 
 
+// --------------------------------------------
+// ------------>>>   2. Grids   <<<------------
+// --------------------------------------------
 
-// 3.0 Uncategorized
+// --------------------------------------------
+// ----------->>>   3. Elements   <<<----------
+// --------------------------------------------
 
 
-// -------------
-// 1.0 Elements
-// -------------
+// 3.1 Buttons
+// ---------------------------------
 
-
-// 1.1 Base
-// -------------
-
-// 1.2 Grids
-// -------------
-// TO-DO: 
-// Write up a section on PureCSS grids with examples.
-
-// 1.3 Buttons
-// -------------
-// TO-DO:
-// Collate all potential icon buttons and append.
-
-    // Standard Buttons
+    // 3.1.1 Standard Buttons
 
     .pure-button {
         @include border-radius(5px);
@@ -220,7 +215,7 @@ body {
         background-color: #a8a8a8;
     }
 
-    // Button Sizes
+    // 3.1.2 Button Sizes
 
     .med-button-xsmall {
         font-size: 70%;
@@ -238,7 +233,7 @@ body {
         font-size: 125%;
     }
 
-    // Buttons with icons
+    // 3.1.3 Buttons with icons
 
     .med-icon-button {
         i {
@@ -246,8 +241,47 @@ body {
         }
     }
 
+    // 3.1.4 Combo Buttons
 
-// 1.6 Menus
+    // 3.1.5 Dropdown Buttons
+
+
+
+// 3.2 Forms
+// ---------------------------------
+
+    .pure-form {
+        font-size: 1.2em;
+        font-family: 'Proxima Nova', Helvetica, sans-serif;
+    }
+
+    input {
+        background-color: #fafafa;
+        margin-right: 0.5em;
+        &:focus {
+            background-color: $white;
+        }
+    }
+
+    .pure-form-stacked
+    input[type="text"],
+    input[type="input"],
+    input[type="email"],
+    input[type="url"] {
+        margin: 1em 0 0 0;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 0.5em;
+    }
+
+
+// 3.3 Tables
+// ---------------------------------
+
+
+// 3.4 Menus
+// ---------------------------------
 
 .med-sidebar {
     background-color: $blue1;
@@ -304,110 +338,55 @@ body {
 }
 
 
+// 3.5 Widgets
+// ---------------------------------
 
-// Other Stuff
+    // 3.5.1 Text Editor
 
-.code {
-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-background-color: #fafafa;
-border: 1px solid #eeeeee;
-color: #555555;
-padding: 1em 1.5em;
-margin: 1.5em 0 3em 0;
-max-width: 800px;
-font-size: 0.8em;
-}
+    .text-editor {
+        @include border-radius(5px);
+        width: 698px;
+        height: 188px;
+        border: 1px solid #d3d5db;
+        padding: 1em;
 
-.text-editor {
-    @include border-radius(5px);
-    width: 698px;
-    height: 188px;
-    border: 1px solid #d3d5db;
-    padding: 1em;
+        .toolbar {
+            height: 46px;
+            border-top: 1px solid #d3d5db;
 
-    .toolbar {
-        height: 46px;
-        border-top: 1px solid #d3d5db;
-
-        ul, li {
-            display: inline;
-            list-style-type: none;
-        }
-    }
-}
-
-aside {
-    display: block;
-    float: right;
-    padding: 1em;
-}
-
-blockquote {
-    color: $light;
-    padding: 0.5em;
-}
-
-
-
-// 1.4 Forms
-
-    // Default Form
-
-    .pure-form {
-        font-size: 1.2em;
-        font-family: 'Proxima Nova', Helvetica, sans-serif;
-    }
-
-    input {
-        background-color: #fafafa;
-        margin-right: 0.5em;
-        &:focus {
-            background-color: $white;
+            ul, li {
+                display: inline;
+                list-style-type: none;
+            }
         }
     }
 
-    .pure-form-stacked
-    input[type="text"],
-    input[type="input"],
-    input[type="email"],
-    input[type="url"] {
-        margin: 1em 0 0 0;
+    // 3.5.3 Voting Buttons (Large)
+
+    .med-big-vote {
+        @include border-radius(5px);
+        background-color: $blue2;
+        color: $white;
+        font-size: 5rem;
+        width: 220px;
+
+        .med-vote-up {
+            padding: 0.5em;
+            float: left;
+        }
+
+        .med-vote-up {
+            padding: 0.5em;
+        }
     }
 
-    input[type="checkbox"] {
-        margin-right: 0.5em;
-    }
 
-    // Stacked Form
+// --------------------------------------------
+// ---------->>>   4. Typography   <<<---------
+// --------------------------------------------
 
-
-
-
-
-// 1.5 Tables
-
-
-// 1.7 Widgets
-
-.med-big-vote {
-    @include border-radius(5px);
-    background-color: $blue2;
-    color: $white;
-    font-size: 5rem;
-    width: 220px;
-
-    .med-vote-up {
-        padding: 0.5em;
-        float: left;
-    }
-
-    .med-vote-up {
-        padding: 0.5em;
-    }
-}
-
-
-// 2.0 Typography
+// 4.1 Base
+// ---------------------------------
 
 p {}
 
@@ -433,7 +412,33 @@ h3 {
     font-size: 2rem;
 }
 
+// 4.2 Code Box
+// ---------------------------------
+
+.code {
+font-family: Consolas, 'Liberation Mono', Courier, monospace;
+background-color: #fafafa;
+border: 1px solid #eeeeee;
+color: #555555;
+padding: 1em 1.5em;
+margin: 1.5em 0 3em 0;
+max-width: 800px;
+font-size: 0.8em;
+}
+
+
 // Uncategorized
+
+aside {
+    display: block;
+    float: right;
+    padding: 1em;
+}
+
+blockquote {
+    color: $light;
+    padding: 0.5em;
+}
 
 .med-header {
     padding: 0.5% 2%;
@@ -451,23 +456,6 @@ section {
 
 }
 
-.med-resource-sidebar-info {
-    @include border-radius(5px);
-    font-size: 1.4rem;
-    background-color: #f9f9f9;
-    width: 218px;
-    padding: 0.5em 1em;
-    margin: 1em 0;
-    border: 1px solid #d3d5db;
 
-    i {
-        padding-right: 0.5em;
-    }
-
-    b {
-        font-weight: 500;
-        color: $blue2;
-    }
-}
 
 
