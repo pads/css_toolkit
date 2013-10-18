@@ -2,53 +2,563 @@
 *=require pure-min
 */
 
-$font-size: 14px;
-$line-height: $font-size * 1.618;
+// Meducation CSS Toolkit
+// By @taiyab, @iHiD, @_pads
 
-body,
-.pure-g [class *= "pure-u"],
-.pure-g-r [class *= "pure-u"] {
-    /* Set you're content font stack here: */
-    font-family: 'museo-sans';
-}
+// NOTE: To anyone editing this, I apologize in advance for the horrible code.
+// Just got back into it! - Taiyab
 
-body {
-    font-weight: 300;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: #2b2c2f;
-}
+// --------------------------------------------
+// -------->>>   Global Variables   <<<--------
+// --------------------------------------------
 
-/* Layout styling */
-.pure-g > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.l-box {
+// Color Palette
+    // Blues
+    $darkblue: #252e39;
+    $blue: #6594ce;
+    $lightblue: #4ea1ff;
+
+    // Grays
+    $lightestgray: #f2f3f7;
+    $lightergray: #dadbde;
+    $darkgray: #292a2d;
+    $darkergray: #1a1b1d;
+    $darkestgray: #0d0d0e;
+
+    // Greens
+    $premiumgreen: #92bc00;
+
+    // Status Colors
+    $success: #66bc00;
+    $error: #e84939;
+    $action: #92bc00;
+    $warning: #e3c01e;
+    $disabled: #a8a8a8;
+
+    // Typography
+        // Base
+        $normal: #181818;
+        $light: #8a8a8a;
+        $really-light: #b6b6b6;
+
+// Control Variables
+    $fixed-width: 800px;
+
+
+// --------------------------------------------
+// ------------->>>   Mixins   <<<-------------
+// --------------------------------------------
+
+    // Border Radius
+
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+    }
+
+
+// --------------------------------------------
+// ------------>>>   Contents   <<<------------
+// --------------------------------------------
+
+/*  1.  Base
+        1.1    Foundation
+        1.2    Typefaces
+        1.3    Brand Colors
+
+    2.  Grids
+        2.1    PureCSS
+        2.2    Examples
+
+    3.  Elements
+        3.1    Buttons
+        3.2    Forms
+        3.3    Tables
+        3.4    Menus
+        3.5    Widgets
+
+    4.  Typography
+        4.1    Base
+        4.2    Headings
+        4.3    Paragraphs
+        4.4    Blockquotes
+        4.5    Ordered List
+        4.6    Unordered List
+        4.7    Definition List
+
+    5.  Assets
+        5.1.    Base
+        5.2.    Images
+        5.3.    Videos
+        5.4.    Slideshows
+        5.5.    Podcasts
+        5.6.    Documents
+        5.7.    Applications
+
+    6.  Icons
+        6.1.    Social Icons
+        6.2.    Font Awesome
+
+    Uncategorized */
+
+
+
+// --------------------------------------------
+// ------------>>>   1. Base   <<<-------------
+// --------------------------------------------
+
+    html {
+        font-weight: 300;
+        font-size: 62.5%;
+        letter-spacing: 0px;
+        line-height: 1.8rem;
+
+    }
+
+    body,
+    .pure-g [class *= "pure-u"],
+    .pure-g-r [class *= "pure-u"] {
+        //Set your content font stack here:
+        font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
+        font-size: 1.6rem;
+        color: $normal;
+    }
+
+
+    body {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .pure-g, .pure-g-r {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    #main {
+    }
+
+    .palette.darkblue {
+        padding: 2em;
+        background-color: $darkblue;
+        color: #fff;
+    }
+
+    .palette.blue {
+    padding: 2em;
+    background-color: $blue;
+    color: #fff;
+    }
+
+    .palette.lightblue {
+        padding: 2em;
+        background-color: $lightblue;
+        color: #fff;
+    }
+
+    .palette.lightestgray {
+        padding: 2em;
+        background-color: $lightestgray;
+        color: #000;
+        }
+
+    .palette.lightergray {
+        padding: 2em;
+        background-color: $lightergray;
+        color: #000;
+        }
+
+    .palette.darkgray {
+        padding: 2em;
+        background-color: $darkgray;
+        color: #fff;
+        }
+
+    .palette.darkergray {
+        padding: 2em;
+        background-color: $darkergray;
+        color: #fff;
+        }
+
+    .palette.darkestgray {
+        padding: 2em;
+        background-color: $darkestgray;
+        color: #fff;
+        }
+
+    .palette.premiumgreen {
+        padding: 2em;
+        background-color: $premiumgreen;
+        color: #fff;
+        }
+
+    #brandcolors {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+// --------------------------------------------
+// ------------>>>   2. Grids   <<<------------
+// --------------------------------------------
+
+/*  
+    TO-DO:
+-   Include section on PureCSS Grid
+-   Include examples
+*/
+
+// --------------------------------------------
+// ----------->>>   3. Elements   <<<----------
+// --------------------------------------------
+
+/*  
+    TO-DO:
+
+*/
+    // 3.1 Buttons
+    // ---------------------------------
+
+        // Standard Buttons
+
+        .pure-button {
+            @include border-radius(5px);
+            background-color: $lightblue;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            padding: 0.6em 1.2em;
+            margin: 1em 0 0 0;
+        }
+
+        .med-button-action {
+            background-color: $action;
+            }
+
+        .med-button-success {
+            background-color: $success;
+            }
+
+        .med-button-error {
+            background-color: $error;
+            }
+
+        .med-button-warning {
+            background-color: $warning;
+        }
+
+        .med-button-disabled {
+            background-color: $disabled;
+        }
+
+        // Button Sizes
+
+        .med-button-xsmall {
+            font-size: 70%;
+        }
+
+        .med-button-small {
+            font-size: 85%;
+        }
+
+        .med-button-large {
+            font-size: 110%;
+        }
+
+        .med-button-xlarge {
+            font-size: 125%;
+        }
+
+        // Buttons with icons
+
+        .med-icon-button {
+            i {
+                padding-right: 0.5em;
+            }
+        }
+
+        // Combo Buttons
+
+        // Dropdown Buttons
+
+
+
+    // 3.2 Forms
+    // ---------------------------------
+
+        .pure-form {
+            @include border-radius(5px);
+            font-family: 'Proxima Nova', Helvetica, sans-serif;
+            padding: 1em;
+            margin: 2em 0;
+            background-color: $lightestgray;
+            border: 1px solid $lightergray;
+        }
+
+        input {
+            background-color: #fafafa;
+            margin-right: 0.5em;
+            &:focus {
+                background-color: #fff;
+            }
+        }
+
+        .pure-form-stacked
+        input[type="text"],
+        input[type="input"],
+        input[type="email"],
+        input[type="url"] {
+            margin: 0;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+
+
+    // 3.3 Tables
+    // ---------------------------------
+
+
+    // 3.4 Menus
+    // ---------------------------------
+
+    .med-sidebar {
+        background-color: $darkblue;
+        color: #ffffff;
+        overflow: hidden;
+
+        .med-menu {
+        background-color: $darkblue;
+        border: 0px;
+        padding: 5% 2% 5% 10%;
+
+            h2 {
+                font-weight: 100;
+                font-size: 1.6rem;
+                padding-top: 5%;
+                color: #fff;
+            }
+
+            a {color: #4d6077;}
+            a:hover {
+                background-color: #1e252e;
+                color: #708db1;
+            }
+            a:active {
+                background-color: #1e252e;
+                color: #fff;
+            }
+
+        }
+
+    }
+
+    .med-secondsidebar {
+        background-color: $lightblue;
+        color: #ffffff;
+        overflow: hidden;
+
+        .med-secondmenu {
+        background-color: $lightblue;
+        border: 0px;
+        padding: 10% 2% 5% 10%;
+            h1 { font-weight: 100; }
+            h2 {
+                font-weight: 100;
+                font-size: 1.6rem;
+                color: #fff;
+            }
+            a {color: #dae8f6;}
+            a:hover {
+                background-color: #4894ea;
+                color: #fff;
+            }
+        }
+    }
+
+    // Header
+    // Navigation
+
+
+    // 3.5 Widgets
+    // ---------------------------------
+
+        // Text Editor
+
+        .text-editor {
+            @include border-radius(5px);
+            width: 698px;
+            height: 188px;
+            border: 1px solid #d3d5db;
+            padding: 1em;
+
+            .toolbar {
+                height: 46px;
+                border-top: 1px solid #d3d5db;
+
+                ul, li {
+                    display: inline;
+                    list-style-type: none;
+                }
+            }
+        }
+
+        // Voting Buttons (Large)
+
+        .med-big-vote {
+            @include border-radius(5px);
+            background-color: $blue;
+            color: #fff;
+            font-size: 5rem;
+            width: 220px;
+
+            .med-vote-up {
+                padding: 0.5em;
+                float: left;
+            }
+
+            .med-vote-up {
+                padding: 0.5em;
+            }
+        }
+
+        // Activity Feed
+        // Credit/Sharing
+        // Voting Buttons (Small)
+        // Tags
+        // Comments
+        // Pagination
+
+
+// --------------------------------------------
+// ---------->>>   4. Typography   <<<---------
+// --------------------------------------------
+
+    // 4.1 Base
+    // ---------------------------------
+
+    p {}
+
+    .med-prominent {
+            background-color: #ffffeb;
+            border: 1px solid #e9e9d7;
+            padding: 1em 1.5em;
+    }
+
+    // Headings
+
+    h1 {
+        font-size: 3.2rem;
+        font-weight: 100;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 100;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 100;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+
+    b {}
+
+    // Font Colors
+
+    .darkblue {
+        color: $darkblue;
+    }
+
+    .blue {
+        color: $blue;
+    }
+
+    .lightblue {
+        color: $lightblue;
+    }
+
+    // 4.2 Code Box
+    // ---------------------------------
+
+    .med-code {
+    @include border-radius(5px);
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    color: #555;
+    padding: 0.8em 1.5em;
+    margin: 2em 0;
+    max-width: 800px;
+    font-size: 0.8em;
+    }
+
+
+// Uncategorized
+
+aside {
+    display: block;
+    float: right;
     padding: 1em;
 }
 
-.pure-button {
-    border-radius: 5px;
-    background-color: rgb( 101, 148, 206 );
-    /*width: 221px;*/
-    color: #ffffff;
-    font-weight: 500;
+blockquote {
+    color: $light;
+    padding: 0.5em;
+}
+
+.med-header1 {
+    padding: 0.5em 2em;
+    background-color: #eff0f4;
+    border-bottom: 1px solid #e0e2e8;
     text-align: center;
-    &:hover, &:active {
-        background-color: rgb( 91, 133, 185 );
+
+    h2 {
+        font-size: 4.8rem;
     }
 }
 
-.pure-menu.pure-menu-open {
-    border-radius: 5px;
-    background-color: rgb( 101, 148, 206 );
+.med-header2 {
+    padding: 0.5em 2em;
+    background-color: $lightergray;
+    color: $darkgray;
 
-    a {
-        color:#fff;
-        &:hover {
-            background-color: rgb( 68, 114, 169 );
-        }
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0 0;
     }
 }
+
+.med-header3 {
+    padding: 0.5em 2em;
+    background-color: $lightestgray;
+    color: $darkgray;
+
+    h4 {
+        margin: 0;
+    }
+
+    }
+
+section {
+    padding: 0 2em;
+
+    h4 {
+        margin-top: 2em;
+        border-bottom: 1px solid $lightergray;
+    }
+}
+
+
+
