@@ -88,251 +88,57 @@
                 %li
                 %a{href: "#"} Dropdowns
 
-    .pure-u-3-4
-        %h2 Base
-        %section
+    .pure-u-3-4#main
+        .med-header1
+            %h2 Base
+        .med-header2
             %h3 Foundation
-            %p.med-prominent The Meducation CSS Toolkit is based off of PureCSS. Initially it will exist as a 'skin' to Pure which matches the Meducation.net design aesthetic. It will enable developers to go from sketches to rapid prototypes faster, whilst maintaining the same look and feel throughout.
-            %p Dependencies:                
-            
-            %h3 Typography
-            %h4 Headings
-            %h1 Cranial Nerves - Anatomy, Clinical Signs and Study Tips
-            %h2 This is a heading h2
-            %h3 This is a heading h3
-            
-            %h4 Unordered Lists
-            .pure-u-1-4
-                %h3 Unordered Lists
-                %ul
-                    %li Item 1
-                    %li Item 2
-                    %li Item 3
-                    %li Item 4
-                    %li Item 5
+        .med-header3
+            %h4 Introduction
+        %section
+            %p The Meducation CSS Toolkit is based off of PureCSS. Initially it will exist as a 'skin' to Pure which matches the Meducation.net design aesthetic. It will enable developers to go from sketches to rapid prototypes faster, whilst maintaing the same look and feel throughout.
 
-            .pure-u-1-4
-                %h3 Ordered Lists
-                %ol
-                    %li Item 1
-                    %li Item 2
-                    %li Item 3
-                    %li Item 4
-                    %li Item 5
-
-            .pure-u-1-4
-                %h3 Definition Lists
-                %dt Definition Term
-                %dd Definition description goes here.
-                %dt Definition Term
-                %dd Definition description goes here.
-                %dt Definition Term
-                %dd Definition description goes here.
-
-            %h4 Quotes
-            %blockquote This is a blockquote test.
-
-            %h4 Code
-            %pre.med-code
-                :escaped
-                    <html></html>
-
-            %h4 Text Editor
-            .text-editor I like to write comments, drink coffee, and write software. This is the comment I’m making on this resource. I’m commenting because I have something to say about it. I can also use formatting options provided in comments :D
-            .toolbar
+        .med-header3
+            %h4 Typefaces
+        %section
             %ul
-                %li Heading 1
-                %li H2
-                %li H3
-                %li B
-                %li I
+                %li Museo Sans
+                %li Proxima Nova
+                %li Helvetica
+                %li (sans-serif)
 
-            %h4 Viewed/Uploaded
-            .med-info-blobs
-                %i.icon-eye-open
-                Viewed
-                %b 6504
-                times
-            .med-info-blobs
-                %i.icon-cloud-upload
-                Uploaded about
-                %b 1 year ago
-
-            %h4 Vote Up/Down
-            .med-big-vote
-                .med-vote-up
-                    %i.icon-thumbs-up
-                .med-vote-down
-                    %i.icon-thumbs-down
-
-        %section
-            %h2 Grids
-        %section
-            %h2 Forms
-            %h3 Default Form
-            %form.pure-form
-                %fieldset
-                    %legend This is a default form.
-                    %input{type: 'email', placeholder: 'Email'}
-                    %input{type: 'password', placeholder: 'Password'}
-                    %label{:for => "remember"}
-                        %input{type: 'checkbox'}Remember me
-                    %a.pure-button.med-button-small Sign In
             %pre.med-code
                 :escaped
-                    <form class="pure form">
-                        <fieldset>
-                            <legend>This is a defualt form.</legend>
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <input type="url" placeholder="URL">
-                            <label for="remember">
-                                <input type="checkbox">Remember me</input>
-                            <a class="pure-button">Sign In</a>
-                        </fieldset>
-                    </form>
-            %h3 Stacked Form
-            %form.pure-form.pure-form-stacked
-                %fieldset
-                    %legend This is a stacked form.
-                    %input{type: 'email', placeholder: 'Email'}
-                    %input{type: 'password', placeholder: 'Password'}
-                    %label{:for => "country"}
-                    %select#state
-                        %option UK
-                        %option US
-                        %option Australia
-
-                    %label{:for => "remember"}
-                        %input{type: 'checkbox'} Remember me
-                    %a.pure-button.medbutton-small Sign In
-                %pre.med-code
-                    :escaped
-                        <form class="pure-form pure-form-stacked">
-                            <fieldset>
-                                <legend>A Stacked Form</legend>
-
-                                <label for="email">Email</label>
-                                <input id="email" type="email" placeholder="Email">
-
-                                <label for="password">Password</label>
-                                <input id="password" type="password" placeholder="Password">
-
-                                <label for="state">State</label>
-                                <select id="state">
-                                    <option>AL</option>
-                                    <option>CA</option>
-                                    <option>IL</option>
-                                </select>
-
-                                <label for="remember" class="pure-checkbox">
-                                    <input id="remember" type="checkbox"> Remember me
-                                </label>
-
-                                <button type="submit" class="pure-button pure-button-primary">Sign in</button>
-                            </fieldset>
-                        </form>
+                    font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
+        .med-header3
+            %h4 Brand Colors
+        %section#brandcolors
+            .pure-u-1-1.palette.darkblue 
+                %b Dark Blue
+                %br $darkblue, #252e39
+            .pure-u-1-1.palette.blue
+                %b Meducation Blue
+                %br $blue, #6594ce
+            .pure-u-1-1.palette.lightblue
+                %b Light Blue
+                %br $lightblue, #4ea1ff
+            .pure-u-1-1.palette.lightestgray
+                %b Lightest Gray
+                %br $lightestgray, #eff0f4
+            .pure-u-1-1.palette.lightergray
+                %b Lighter Gray
+                %br $lightergray, #dadbde
+            .pure-u-1-1.palette.darkgray
+                %b Dark Gray
+                %br $darkgray, #292a2d
+            .pure-u-1-1.palette.darkergray
+                %b Darker Gray
+                %br $darkergray, #1a1b1d
+            .pure-u-1-1.palette.darkestgray
+                %b Darkest Gray
+                %br $darkestgray, #0d0d0e
+            .pure-u-1-1.palette.premiumgreen
+                %b Premium Green
+                %br $premiumgreen, #92bc00
 
 
-            %h3 Aligned Form
-            %h3 Multi-Column Form
-            %h3 Grouped Inputs
-            %h3 Input Sizing
-            %h3 Required Inputs
-            %h3 Disabled Inputs
-            %h3 Read-Only Inputs
-            %h3 Rounded Inputs
-            %h3 Checkboxes and Radios
-        %section
-
-            %h2 Buttons
-            %a.pure-button Standard Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button">Standard Button</a>
-
-            %a.pure-button.med-button-action Action Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-action">Action Button</a>
-
-            %a.pure-button.med-button-success Success Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-success">Success Button</a>
-
-            %a.pure-button.med-button-error Error Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-error">Error Button</a>
-
-            %a.pure-button.med-button-warning Warning Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-warning">Warning Button</a>
-
-            %a.pure-button.med-button-disabled Disabled Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-disabled">Disabled Button</a>
-
-            %h3 Buttons with different sizes
-            
-            %a.pure-button.med-button-xsmall Extra Small Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-xsmall">Extra Small Button</a>
-            
-            %a.pure-button.med-button-small Small Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-small">Extra Small Button</a>
-            
-            %a.pure-button.med-button-large Large Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-large">Large Button</a>
-            
-            %a.pure-button.med-button-xlarge Extra Large Button
-            %pre.med-code 
-                :escaped
-                    <a class="pure-button.med-button-xlarge">Extra Large Button</a>
-
-            %h3 Buttons with icons
-            %a.pure-button.med-button-action.med-icon-button
-                %i.icon-star
-                Premium
-            %pre.med-code
-                :escaped
-                    <a class="pure-button.med-premium"><i class="icon-star"></i>Premium</a>
-
-            %a.pure-button.med-button-action.med-icon-button
-                %i.icon-cloud-download
-                Download File
-            %pre.med-code
-                :escaped
-                    <a class="pure-button.med-download"><i class="icon-cloud-download"></i>Download File</a>
-
-            %a.pure-button.med-icon-button
-                %i.icon-book
-                Add to Library
-            %pre.med-code
-                :escaped
-                    <a class="pure-button.med-addtolibrary"><i class="icon-book"></i>Add to Library</a>
-
-
-        %section
-            %h2 Tables
-            %h3 Default Table
-            %h3 Bordered Table
-            %h3 Table with Horizontal Borders
-            %h3 Striped Table
-        %section
-            %h2 Menus
-            %h3 Horizontal Menu
-            %h3 Menu with Headings
-            %h3 Vertical Menu
-            %h3 Add Dropdowns to Menus
-            %h3 Menus with Disabled Items
-            %h3 Pagination

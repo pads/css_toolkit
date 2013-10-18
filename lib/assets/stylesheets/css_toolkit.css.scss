@@ -19,10 +19,14 @@
     $lightblue: #4ea1ff;
 
     // Grays
-    $lightgray: #eff0f4;
+    $lightestgray: #eff0f4;
+    $lightergray: #dadbde;
     $darkgray: #292a2d;
     $darkergray: #1a1b1d;
     $darkestgray: #0d0d0e;
+
+    // Greens
+    $premiumgreen: #92bc00;
 
     // Status Colors
     $success: #66bc00;
@@ -133,6 +137,69 @@
         min-height: 100%;
     }
 
+    #main {
+    }
+
+    .palette.darkblue {
+        padding: 2em;
+        background-color: $darkblue;
+        color: #fff;
+    }
+
+    .palette.blue {
+    padding: 2em;
+    background-color: $blue;
+    color: #fff;
+    }
+
+    .palette.lightblue {
+        padding: 2em;
+        background-color: $lightblue;
+        color: #fff;
+    }
+
+    .palette.lightestgray {
+        padding: 2em;
+        background-color: $lightestgray;
+        color: #000;
+        }
+
+    .palette.lightergray {
+        padding: 2em;
+        background-color: $lightergray;
+        color: #000;
+        }
+
+    .palette.darkgray {
+        padding: 2em;
+        background-color: $darkgray;
+        color: #fff;
+        }
+
+    .palette.darkergray {
+        padding: 2em;
+        background-color: $darkergray;
+        color: #fff;
+        }
+
+    .palette.darkestgray {
+        padding: 2em;
+        background-color: $darkestgray;
+        color: #fff;
+        }
+
+    .palette.premiumgreen {
+        padding: 2em;
+        background-color: $premiumgreen;
+        color: #fff;
+        }
+
+    #brandcolors {
+        margin: 0;
+        padding: 0;
+    }
+
+
 
 // --------------------------------------------
 // ------------>>>   2. Grids   <<<------------
@@ -150,7 +217,7 @@
 
 /*  
     TO-DO:
-    
+
 */
     // 3.1 Buttons
     // ---------------------------------
@@ -377,20 +444,42 @@
             padding: 1em 1.5em;
     }
 
+    // Headings
+
     h1 {
-        font-weight: 100;
         font-size: 3.2rem;
+        font-weight: 100;
     }
 
     h2 {
-        font-weight: 100;
         font-size: 2.4rem;
+        font-weight: 100;
     }
 
     h3 {
-        margin: 2em 0 1em 0;
-        font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        font-weight: 100;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+
+    b {}
+
+    // Font Colors
+
+    .darkblue {
+        color: $darkblue;
+    }
+
+    .blue {
+        color: $blue;
+    }
+
+    .lightblue {
+        color: $lightblue;
     }
 
     // 4.2 Code Box
@@ -402,8 +491,8 @@
     background-color: #fafafa;
     border: 1px solid #e1e1e1;
     color: #555;
-    padding: 1em 1.5em;
-    margin: 1.5em 0 3em 0;
+    padding: 0.8em 1.5em;
+    margin: 2em 0;
     max-width: 800px;
     font-size: 0.8em;
     }
@@ -422,19 +511,43 @@ blockquote {
     padding: 0.5em;
 }
 
-.med-header {
-    padding: 0.5% 2%;
+.med-header1 {
+    padding: 0.5em 2em;
     background-color: #eff0f4;
     border-bottom: 1px solid #e0e2e8;
+    text-align: center;
 
     h2 {
-        font-size: 3rem;
+        font-size: 4.8rem;
     }
 }
 
+.med-header2 {
+    padding: 0.5em 2em;
+    background-color: $lightergray;
+    color: $darkgray;
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0 0;
+    }
+}
+
+.med-header3 {
+    padding: 0.5em 2em;
+    background-color: $lightestgray;
+    color: $darkgray;
+
+    h4 {
+        margin: 0;
+    }
+
+    }
+
 section {
-    padding: 0 2% 3em 2%;
-    border-bottom: 1px solid #cfd4de;
+    padding: 0 2em;
 
 }
 
