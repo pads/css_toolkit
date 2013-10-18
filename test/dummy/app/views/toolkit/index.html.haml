@@ -73,22 +73,22 @@
 
             %h2 Uncategorized
 
-    .pure-u-1-8.med-secondsidebar 
-        .pure-menu.pure-menu-open.med-secondmenu
-            %h2 Buttons
-            %ul
-                %li
-                %a{href: "#"} Standard
-                %li
-                %a{href: "#"} Sizes
-                %li
-                %a{href: "#"} Buttons (+ Icons)
-                %li
-                %a{href: "#"} Combos
-                %li
-                %a{href: "#"} Dropdowns
+    / .pure-u-1-8.med-secondsidebar 
+    /     .pure-menu.pure-menu-open.med-secondmenu
+    /         %h2 Buttons
+    /         %ul
+    /             %li
+    /             %a{href: "#"} Standard
+    /             %li
+    /             %a{href: "#"} Sizes
+    /             %li
+    /             %a{href: "#"} Buttons (+ Icons)
+    /             %li
+    /             %a{href: "#"} Combos
+    /             %li
+    /             %a{href: "#"} Dropdowns
 
-    .pure-u-3-4#main
+    .pure-u-7-8#main
         .med-header1
             %h2 Base
         .med-header2
@@ -140,5 +140,174 @@
             .pure-u-1-1.palette.premiumgreen
                 %b Premium Green
                 %br $premiumgreen, #92bc00
+        .med-header1
+            %h2 Grids
+        .med-header2
+            %h3 PureCSS
+        %section
+            %p We use the PureCSS fluid grid system:
+            %blockquote
+                %h3 Grid classes vs. unit classes
+                Pure Grids consist of two types of classes: grid classes (pure-g or pure-g-r) and unit classes (pure-u or pure-u-*)
+                
+                %h3 The widths of the units are fractions
+                Units have various class names that represent their widths. For example, pure-u-1-2 has a width of 50%, whereas pure-u-1-5 would have a width of 20%.
+                
+                %h3 All child elements of a grid must be units
+                Child elements contained within an element with a pure-g classname must be a grid unit with a pure-u or pure-u-* classname.
+                
+                %h3 Content goes inside grid units
+                All content which is visible to people needs to be contained inside a grid unit. This ensures that the content will be rendered properly.
+        .med-header2
+            %h3 Examples
+        %section
+            %p Here are some examples of the Pure Grid in action:
+            .pure-u-1-1.palette.lightestgray Full Column
+        .med-header1
+            %h2 Elements
+        .med-header2
+            %h3 Buttons
+        %section
+            %a.pure-button Standard Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button">Standard Button</a>
+
+            %a.pure-button.med-button-action Action Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-action">Action Button</a>
+
+            %a.pure-button.med-button-success Success Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-success">Success Button</a>
+
+            %a.pure-button.med-button-error Error Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-error">Error Button</a>
+
+            %a.pure-button.med-button-warning Warning Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-warning">Warning Button</a>
+
+            %a.pure-button.med-button-disabled Disabled Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-disabled">Disabled Button</a>
+
+            %h3 Buttons with different sizes
+            
+            %a.pure-button.med-button-xsmall Extra Small Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-xsmall">Extra Small Button</a>
+            
+            %a.pure-button.med-button-small Small Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-small">Extra Small Button</a>
+            
+            %a.pure-button.med-button-large Large Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-large">Large Button</a>
+            
+            %a.pure-button.med-button-xlarge Extra Large Button
+            %pre.med-code 
+                :escaped
+                    <a class="pure-button.med-button-xlarge">Extra Large Button</a>
+
+            %h3 Buttons with icons
+            %a.pure-button.med-button-action.med-icon-button
+                %i.icon-star
+                Premium
+            %pre.med-code
+                :escaped
+                    <a class="pure-button.med-premium"><i class="icon-star"></i>Premium</a>
+
+            %a.pure-button.med-button-action.med-icon-button
+                %i.icon-cloud-download
+                Download File
+            %pre.med-code
+                :escaped
+                    <a class="pure-button.med-download"><i class="icon-cloud-download"></i>Download File</a>
+
+            %a.pure-button.med-icon-button
+                %i.icon-book
+                Add to Library
+            %pre.med-code
+                :escaped
+                    <a class="pure-button.med-addtolibrary"><i class="icon-book"></i>Add to Library</a>
+
+        .med-header2
+            %h3 Forms
+        %section
+            %h4 Default Form
+            %form.pure-form
+                %fieldset
+                    %legend This is a default form.
+                    %input{type: 'email', placeholder: 'Email'}
+                    %input{type: 'password', placeholder: 'Password'}
+                    %label{:for => "remember"}
+                        %input{type: 'checkbox'}Remember me
+                    %a.pure-button.med-button-small Sign In
+            %pre.med-code
+                :escaped
+                    <form class="pure form">
+                        <fieldset>
+                            <legend>This is a defualt form.</legend>
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <label for="remember">
+                                <input type="checkbox">Remember me</input>
+                            <a class="pure-button">Sign In</a>
+                        </fieldset>
+                    </form>
+
+            %h4 Stacked Form
+            %form.pure-form.pure-form-stacked
+                %fieldset
+                    %legend This is a stacked form.
+                    %input{type: 'email', placeholder: 'Email'}
+                    %input{type: 'password', placeholder: 'Password'}
+                    %label{:for => "country"}
+                    %select#state
+                        %option UK
+                        %option US
+                        %option Australia
+
+                    %label{:for => "remember"}
+                        %input{type: 'checkbox'} Remember me
+                    %a.pure-button.medbutton-small Sign In
+            %pre.med-code
+                :escaped
+                    <form class="pure-form pure-form-stacked">
+                        <fieldset>
+                            <legend>A Stacked Form</legend>
+
+                            <label for="email">Email</label>
+                            <input id="email" type="email" placeholder="Email">
+
+                            <label for="password">Password</label>
+                            <input id="password" type="password" placeholder="Password">
+
+                            <label for="state">State</label>
+                            <select id="state">
+                                <option>AL</option>
+                                <option>CA</option>
+                                <option>IL</option>
+                            </select>
+
+                            <label for="remember" class="pure-checkbox">
+                                <input id="remember" type="checkbox"> Remember me
+                            </label>
+
+                            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                        </fieldset>
+                    </form>
+
 
 

@@ -19,7 +19,7 @@
     $lightblue: #4ea1ff;
 
     // Grays
-    $lightestgray: #eff0f4;
+    $lightestgray: #f2f3f7;
     $lightergray: #dadbde;
     $darkgray: #292a2d;
     $darkergray: #1a1b1d;
@@ -113,7 +113,7 @@
         font-weight: 300;
         font-size: 62.5%;
         letter-spacing: 0px;
-        line-height: 1.3rem;
+        line-height: 1.8rem;
 
     }
 
@@ -122,7 +122,7 @@
     .pure-g-r [class *= "pure-u"] {
         //Set your content font stack here:
         font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: $normal;
     }
 
@@ -231,6 +231,7 @@
             font-weight: 500;
             text-align: center;
             padding: 0.6em 1.2em;
+            margin: 1em 0 0 0;
         }
 
         .med-button-action {
@@ -289,8 +290,12 @@
     // ---------------------------------
 
         .pure-form {
-            font-size: 1.2em;
+            @include border-radius(5px);
             font-family: 'Proxima Nova', Helvetica, sans-serif;
+            padding: 1em;
+            margin: 2em 0;
+            background-color: $lightestgray;
+            border: 1px solid $lightergray;
         }
 
         input {
@@ -306,7 +311,7 @@
         input[type="input"],
         input[type="email"],
         input[type="url"] {
-            margin: 1em 0 0 0;
+            margin: 0;
         }
 
         input[type="checkbox"] {
@@ -549,8 +554,11 @@ blockquote {
 section {
     padding: 0 2em;
 
+    h4 {
+        margin-top: 2em;
+        border-bottom: 1px solid $lightergray;
+    }
 }
-
 
 
 
