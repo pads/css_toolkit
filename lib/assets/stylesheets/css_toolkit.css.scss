@@ -28,6 +28,8 @@
     $success: #66bc00;
     $error: #e84939;
     $action: #92bc00;
+    $warning: #e3c01e;
+    $disabled: #a8a8a8;
 
     // Typography
         // Base
@@ -107,7 +109,7 @@
         font-weight: 300;
         font-size: 62.5%;
         letter-spacing: 0px;
-        line-height: 1.6rem;
+        line-height: 1.3rem;
 
     }
 
@@ -116,7 +118,7 @@
     .pure-g-r [class *= "pure-u"] {
         //Set your content font stack here:
         font-family: 'museo-sans', 'Proxima Nova', Helvetica, sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         color: $normal;
     }
 
@@ -168,11 +170,11 @@
             }
 
         .med-button-warning {
-            background-color: #e3c01e;
+            background-color: $warning;
         }
 
         .med-button-disabled {
-            background-color: #a8a8a8;
+            background-color: $disabled;
         }
 
         // Button Sizes
@@ -255,7 +257,7 @@
 
             h2 {
                 font-weight: 100;
-                font-size: 2rem;
+                font-size: 1.6rem;
                 padding-top: 5%;
                 color: #fff;
             }
@@ -286,7 +288,7 @@
             h1 { font-weight: 100; }
             h2 {
                 font-weight: 100;
-                font-size: 2rem;
+                font-size: 1.6rem;
                 color: #fff;
             }
             a {color: #dae8f6;}
@@ -407,7 +409,7 @@ blockquote {
     border-bottom: 1px solid #e0e2e8;
 
     h2 {
-        font-size: 4.8rem;
+        font-size: 3rem;
     }
 }
 
