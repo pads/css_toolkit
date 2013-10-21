@@ -13,20 +13,30 @@
 // --------------------------------------------
 
 // Color Palette
+    
     // Blues
-    $darkblue: #252e39;
-    $blue: #6594ce;
-    $lightblue: #4ea1ff;
+    $lighterblue: #92c2ff;
+    $lightblue: #4f9dff;
+    $blue: #3e7fcf; // Meducation Blue
+    $darkblue: #3368aa;
+    $darkerblue: #234b77;
+    $verydarkblue: #1f2326;
 
     // Grays
-    $lightestgray: #f2f3f7;
-    $lightergray: #dadbde;
-    $darkgray: #292a2d;
+    $lightergray: #f2f3f7;
+    $lightgray: #c9cacc;
+    $gray: #808183;
+    $darkgray: #3d3f41;
     $darkergray: #1a1b1d;
-    $darkestgray: #0d0d0e;
+    $verydarkgray: #171718;
 
     // Greens
-    $premiumgreen: #92bc00;
+    $lightergreen: #a9fc5b;
+    $lightgreen: #87ed27;
+    $green: #59a80f; // Prmeium Green
+    $darkgreen: #3f760c;
+    $darkergreen: #274807;
+    $verydarkgreen: #182c05;
 
     // Status Colors
     $success: #66bc00;
@@ -140,59 +150,86 @@
     #main {
     }
 
-    .palette.darkblue {
+    .palette {
         padding: 2em;
-        background-color: $darkblue;
         color: #fff;
+        
+        // Blues
+        .lighterblue {
+            background-color: $lighterblue;
+            color: #fff;
+        }
+        .lightblue {
+            background-color: $lightblue;
+            color: #fff;
+        }
+        .blue {
+            background-color: $blue;
+            color: #fff;
+        }
+
+        .darkblue {
+            background-color: $darkblue;
+            color: #fff;
+        }
+        .darkerblue {
+            background-color: $darkerblue;
+            color: #fff;
+        }
+
+        .verydarkblue {
+            background-color: $verydarkblue;
+            color: #fff;
+        }
+
+        // Grays
+        .lightergray {background-color: $lightergray;}
+        .lightgray {background-color: $lightgray;}
+        .gray {background-color: $gray;}
+        .darkgray {
+            background-color: $darkgray;
+            color: #fff;
+        }
+
+        .darkergray {
+            background-color: $darkergray;
+            color: #fff;
+        }
+
+        .verydarkgray {
+            background-color: $verydarkgray;
+            color: #fff;
+        }
+
+        // Greens
+        .lightergreen {
+            background-color: $lightergreen;
+        }
+
+        .lightgreen {
+            background-color: $lightgreen;
+        }
+
+        .green {
+            background-color: $green;
+            color: #fff;
+        }
+
+        .darkgreen {
+            background-color: $darkgreen;
+            color: #fff;
+        }
+
+        .darkergreen {
+            background-color: $darkergreen;
+            color: #fff;
+        }
+
+        .verydarkgreen {
+            background-color: $verydarkgreen;
+            color: #fff;
+        }
     }
-
-    .palette.blue {
-    padding: 2em;
-    background-color: $blue;
-    color: #fff;
-    }
-
-    .palette.lightblue {
-        padding: 2em;
-        background-color: $lightblue;
-        color: #fff;
-    }
-
-    .palette.lightestgray {
-        padding: 2em;
-        background-color: $lightestgray;
-        color: #000;
-        }
-
-    .palette.lightergray {
-        padding: 2em;
-        background-color: $lightergray;
-        color: #000;
-        }
-
-    .palette.darkgray {
-        padding: 2em;
-        background-color: $darkgray;
-        color: #fff;
-        }
-
-    .palette.darkergray {
-        padding: 2em;
-        background-color: $darkergray;
-        color: #fff;
-        }
-
-    .palette.darkestgray {
-        padding: 2em;
-        background-color: $darkestgray;
-        color: #fff;
-        }
-
-    .palette.premiumgreen {
-        padding: 2em;
-        background-color: $premiumgreen;
-        color: #fff;
-        }
 
     #brandcolors {
         margin: 0;
@@ -226,7 +263,7 @@
 
         .pure-button {
             @include border-radius(5px);
-            background-color: $lightblue;
+            background-color: $lighterblue;
             color: #ffffff;
             font-weight: 500;
             text-align: center;
@@ -294,8 +331,8 @@
             font-family: 'Proxima Nova', Helvetica, sans-serif;
             padding: 1em;
             margin: 2em 0;
-            background-color: $lightestgray;
-            border: 1px solid $lightergray;
+            background-color: $lightergray;
+            border: 1px solid $lightgray;
         }
 
         input {
@@ -343,13 +380,13 @@
                 color: #fff;
             }
 
-            a {color: #4d6077;}
+            a {color: $lighterblue;}
             a:hover {
-                background-color: #1e252e;
-                color: #708db1;
+                background-color: $darkerblue;
+                color: $lighterblue;
             }
             a:active {
-                background-color: #1e252e;
+                background-color: $darkerblue;
                 color: #fff;
             }
 
@@ -358,12 +395,12 @@
     }
 
     .med-secondsidebar {
-        background-color: $lightblue;
+        background-color: $lighterblue;
         color: #ffffff;
         overflow: hidden;
 
         .med-secondmenu {
-        background-color: $lightblue;
+        background-color: $lighterblue;
         border: 0px;
         padding: 10% 2% 5% 10%;
             h1 { font-weight: 100; }
@@ -483,8 +520,8 @@
         color: $blue;
     }
 
-    .lightblue {
-        color: $lightblue;
+    .lighterblue {
+        color: $lighterblue;
     }
 
     // 4.2 Code Box
@@ -529,7 +566,7 @@ blockquote {
 
 .med-header2 {
     padding: 0.5em 2em;
-    background-color: $lightergray;
+    background-color: $lightgray;
     color: $darkgray;
 
     h3 {
@@ -542,7 +579,7 @@ blockquote {
 
 .med-header3 {
     padding: 0.5em 2em;
-    background-color: $lightestgray;
+    background-color: $lightergray;
     color: $darkgray;
 
     h4 {
@@ -559,6 +596,3 @@ section {
         border-bottom: 1px solid $lightergray;
     }
 }
-
-
-
