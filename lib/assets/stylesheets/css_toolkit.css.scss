@@ -131,11 +131,7 @@
         font-weight: 300;
         font-size: 62.5%;
         letter-spacing: 0px;
-<<<<<<< HEAD
-        line-height: 1.6rem;
-=======
     }
->>>>>>> 5415f2ac426d77fbf14d67b988770a8ea65d52a5
 
     body {
         font-family: $font-family;
@@ -150,12 +146,7 @@
     .pure-g [class *= "pure-u"],
     .pure-g-r [class *= "pure-u"] {
         //Set your content font stack here:
-<<<<<<< HEAD
-        font-family: 'Proxima Nova', Helvetica, sans-serif;
-        font-size: 1.4em;
-=======
         font-family: $font-family;
->>>>>>> 5415f2ac426d77fbf14d67b988770a8ea65d52a5
     }
 
     h1,h2,h3,h4,h5,h6 {
