@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,lib}/**/*", "LICENSE.md", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
+  s.add_dependency 'font-awesome-sass'
+
   s.add_development_dependency "rails", "> 3.2"
   s.add_development_dependency "sass-rails"
   s.add_development_dependency "haml"
