@@ -38,6 +38,9 @@
     $darkergreen: #274807;
     $verydarkgreen: #182c05;
 
+    // Orange
+    $orange1: #e05e20;
+
     // Status Colors
     $success: #66bc00;
     $error: #e84939;
@@ -299,6 +302,10 @@
             i {
                 padding-right: 0.5em;
             }
+        }
+
+        .reputation {
+            background-color: $
         }
 
         // Combo Buttons
