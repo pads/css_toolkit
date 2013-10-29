@@ -5,15 +5,12 @@
 // Meducation CSS Toolkit
 // By @taiyab, @iHiD, @_pads
 
-// NOTE: To anyone editing this, I apologize in advance for the horrible code.
-// Just got back into it! - Taiyab
-
 // --------------------------------------------
 // -------->>>   Global Variables   <<<--------
 // --------------------------------------------
 
 // Color Palette
-    
+
     // Blues
     $lighterblue: #92c2ff;
     $lightblue: #4f9dff;
@@ -51,14 +48,13 @@
     $disabled: #a8a8a8;
 
     // Typography
-        // Base
-        $normal: #181818;
-        $light: #8a8a8a;
-        $really-light: #b6b6b6;
+    $normal: #181818;
+    $light: #8a8a8a;
+    $really-light: #b6b6b6;
 
 // Control Variables
     $fixed-width: 800px;
-
+    $font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
 
 // --------------------------------------------
 // ------------->>>   Mixins   <<<-------------
@@ -71,6 +67,13 @@
         -moz-border-radius: $radius;
         -ms-border-radius: $radius;
         border-radius: $radius;
+    }
+
+    @mixin font-size($size: 1.8) {
+      font-size: ($size * 10) + px;
+      font-size: $size + rem;
+      line-height: (1.618 * $size * 10) + px;
+      line-height: (1.618 * $size) + rem;
     }
 
 
@@ -128,121 +131,59 @@
         font-weight: 300;
         font-size: 62.5%;
         letter-spacing: 0px;
-        line-height: 1.8rem;
-
     }
+
+    body {
+        font-family: $font-family;
+        @include font-size(1.9);
+        color:$darkgray;
+        margin: 0;
+    }
+
+    *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
     body,
     .pure-g [class *= "pure-u"],
     .pure-g-r [class *= "pure-u"] {
         //Set your content font stack here:
-        font-family: 'Proxima Nova', Helvetica, sans-serif;
-        font-size: 1.2em;
+        font-family: $font-family;
     }
 
-    .palette {
-        padding: 2em;
-        color: #fff;
-        
-        // Blues
-        .lighterblue {
-            background-color: $lighterblue;
-            color: #fff;
-        }
-        .lightblue {
-            background-color: $lightblue;
-            color: #fff;
-        }
-        .blue {
-            background-color: $blue;
-            color: #fff;
-        }
-
-        .darkblue {
-            background-color: $darkblue;
-            color: #fff;
-        }
-        .darkerblue {
-            background-color: $darkerblue;
-            color: #fff;
-        }
-
-        .verydarkblue {
-            background-color: $verydarkblue;
-            color: #fff;
-        }
-
-        // Grays
-        .lightergray {background-color: $lightergray;}
-        .lightgray {background-color: $lightgray;}
-        .gray {background-color: $gray;}
-        .darkgray {
-            background-color: $darkgray;
-            color: #fff;
-        }
-
-        .darkergray {
-            background-color: $darkergray;
-            color: #fff;
-        }
-
-        .verydarkgray {
-            background-color: $verydarkgray;
-            color: #fff;
-        }
-
-        // Greens
-        .lightergreen {
-            background-color: $lightergreen;
-        }
-
-        .lightgreen {
-            background-color: $lightgreen;
-        }
-
-        .green {
-            background-color: $green;
-            color: #fff;
-        }
-
-        .darkgreen {
-            background-color: $darkgreen;
-            color: #fff;
-        }
-
-        .darkergreen {
-            background-color: $darkergreen;
-            color: #fff;
-        }
-
-        .verydarkgreen {
-            background-color: $verydarkgreen;
-            color: #fff;
-        }
+    h1,h2,h3,h4,h5,h6 {
+        @include font-size(1.9);
+        margin:0px;
+        font-weight: 100;
     }
 
-    #brandcolors {
-        margin: 0;
-        padding: 0;
+    strong {
+        font-weight:500;
+        font-style:normal;
     }
 
-
+    em {
+        font-style:italic;
+    }
 
 // --------------------------------------------
 // ------------>>>   2. Grids   <<<------------
 // --------------------------------------------
 
-/*  
+/*
     TO-DO:
 -   Include section on PureCSS Grid
 -   Include examples
 */
 
+    .buffer-top { margin-top: 1em }
+    .buffer-right { margin-right: 1em }
+    .buffer-bottom { margin-bottom: 1em }
+    .buffer-left { margin-left: 1em }
+
 // --------------------------------------------
 // ----------->>>   3. Elements   <<<----------
 // --------------------------------------------
 
-/*  
+/*
     TO-DO:
 
 */
@@ -258,58 +199,31 @@
             font-weight: 500;
             text-align: center;
             padding: 8px 11px;
-            margin: 1em 0 0 0;
-        }
 
-        .med-button-action {
-            background-color: $action;
-            }
-
-        .med-button-success {
-            background-color: $success;
-            }
-
-        .med-button-error {
-            background-color: $error;
-            }
-
-        .med-button-warning {
-            background-color: $warning;
-        }
-
-        .med-button-disabled {
-            background-color: $disabled;
-        }
-
-        // Button Sizes
-
-        .med-button-xsmall {
-            font-size: 70%;
-        }
-
-        .med-button-small {
-            font-size: 85%;
-        }
-
-        .med-button-large {
-            font-size: 110%;
-        }
-
-        .med-button-xlarge {
-            font-size: 125%;
-        }
-
-        // Buttons with icons
-
-        .med-icon-button {
             i {
                 padding-right: 0.5em;
             }
+
+            // States
+            &.disabled { background-color: $disabled; }
+
+            // Sizes
+            &.xsmall { font-size: 70%; }
+            &.small { font-size: 85%; }
+            &.large { font-size: 110%; }
+            &.xlarge { font-size: 125%; }
+
+            // General Buttons
+            &.action { background-color: $action; }
+            &.success { background-color: $success; }
+            &.error { background-color: $error; }
+            &.warning { background-color: $warning; }
+
+            // Sub-types
+            &.reputation { background-color: $orange1; }
+            &.badge { background-color: $darkblue; }
         }
 
-        .reputation {
-            background-color: $orange1;
-        }
 
         // Combo Buttons
 
@@ -320,35 +234,6 @@
     // 3.2 Forms
     // ---------------------------------
 
-        .pure-form {
-            @include border-radius(5px);
-            font-family: 'Proxima Nova', Helvetica, sans-serif;
-            padding: 1em;
-            margin: 2em 0;
-            background-color: $lightergray;
-            border: 1px solid $lightgray;
-        }
-
-        input {
-            background-color: #fafafa;
-            margin-right: 0.5em;
-            &:focus {
-                background-color: #fff;
-            }
-        }
-
-        .pure-form-stacked
-        input[type="text"],
-        input[type="input"],
-        input[type="email"],
-        input[type="url"] {
-            margin: 0;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 0.5em;
-        }
-
 
     // 3.3 Tables
     // ---------------------------------
@@ -357,112 +242,28 @@
     // 3.4 Menus
     // ---------------------------------
 
-    .med-sidebar {
-        background-color: $darkblue;
-        color: #ffffff;
-        overflow: hidden;
-
-        .med-menu {
-        background-color: $darkblue;
-        border: 0px;
-        padding: 5% 2% 5% 10%;
-
-            h2 {
-                font-weight: 100;
-                font-size: 1.6rem;
-                padding-top: 5%;
-                color: #fff;
-            }
-
-            a {color: $lighterblue;}
-            a:hover {
-                background-color: $darkerblue;
-                color: $lighterblue;
-            }
-            a:active {
-                background-color: $darkerblue;
-                color: #fff;
-            }
-
-        }
-
-    }
-
-    .med-secondsidebar {
-        background-color: $lighterblue;
-        color: #ffffff;
-        overflow: hidden;
-
-        .med-secondmenu {
-        background-color: $lighterblue;
-        border: 0px;
-        padding: 10% 2% 5% 10%;
-            h1 { font-weight: 100; }
-            h2 {
-                font-weight: 100;
-                font-size: 1.6rem;
-                color: #fff;
-            }
-            a {color: #dae8f6;}
-            a:hover {
-                background-color: #4894ea;
-                color: #fff;
-            }
-        }
-    }
-
     // Header
     // Navigation
 
 
     // 3.5 Widgets
     // ---------------------------------
-
-        // Text Editor
-
-        .text-editor {
-            @include border-radius(5px);
-            width: 698px;
-            height: 188px;
-            border: 1px solid #d3d5db;
-            padding: 1em;
-
-            .toolbar {
-                height: 46px;
-                border-top: 1px solid #d3d5db;
-
-                ul, li {
-                    display: inline;
-                    list-style-type: none;
-                }
-            }
-        }
-
-        // Voting Buttons (Large)
-
-        .med-big-vote {
-            @include border-radius(5px);
-            background-color: $blue;
-            color: #fff;
-            font-size: 5rem;
-            width: 220px;
-
-            .med-vote-up {
-                padding: 0.5em;
-                float: left;
-            }
-
-            .med-vote-up {
-                padding: 0.5em;
-            }
-        }
-
         // Activity Feed
         // Credit/Sharing
         // Voting Buttons (Small)
         // Tags
         // Comments
         // Pagination
+
+        .avatar {
+            border-radius:100%;
+            border:1px solid #aaa;
+
+            &.bordered {
+                background:#fff;
+                padding:5px;
+            }
+        }
 
 
 // --------------------------------------------
@@ -472,121 +273,40 @@
     // 4.1 Base
     // ---------------------------------
 
-    p {}
+    section.typography {
 
-    .med-prominent {
+        .med-prominent {
             background-color: #ffffeb;
             border: 1px solid #e9e9d7;
             padding: 1em 1.5em;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            margin-bottom:1.5rem;
+        }
+
+        h1 { @include font-size(3.2); }
+        h2 { @include font-size(2.6); }
+        h3 { @include font-size(2.4); }
+        h4 { @include font-size(2.2); }
+        h5 { @include font-size(2.0); }
+        h6 { @include font-size(1.9); }
+
+        p { margin-bottom:1em; }
     }
 
-    // Headings
+    // Uncategorized
 
-    h1 {
-        font-size: 3.2rem;
-        font-weight: 100;
+    blockquote {
+        color: $light;
+        padding: 0.5em;
     }
 
-    h2 {
-        font-size: 2.4rem;
-        font-weight: 100;
+    section {
+        padding: 0 2em;
+
+        h4 {
+            margin-top: 2em;
+            border-bottom: 1px solid $lightergray;
+        }
     }
-
-    h3 {
-        font-size: 1.8rem;
-        font-weight: 100;
-    }
-
-    h4 {
-        font-size: 1.4rem;
-        font-weight: 100;
-    }
-
-    b {}
-
-    // Font Colors
-
-    .darkblue {
-        color: $darkblue;
-    }
-
-    .blue {
-        color: $blue;
-    }
-
-    .lighterblue {
-        color: $lighterblue;
-    }
-
-    // 4.2 Code Box
-    // ---------------------------------
-
-    .med-code {
-    @include border-radius(5px);
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
-    background-color: #fafafa;
-    border: 1px solid #e1e1e1;
-    color: #555;
-    padding: 0.8em 1.5em;
-    margin: 2em 0;
-    max-width: 800px;
-    font-size: 0.8em;
-    }
-
-
-// Uncategorized
-
-aside {
-    display: block;
-    float: right;
-    padding: 1em;
-}
-
-blockquote {
-    color: $light;
-    padding: 0.5em;
-}
-
-.med-header1 {
-    padding: 0.5em 2em;
-    background-color: #eff0f4;
-    border-bottom: 1px solid #e0e2e8;
-    text-align: center;
-
-    h2 {
-        font-size: 4.8rem;
-    }
-}
-
-.med-header2 {
-    padding: 0.5em 2em;
-    background-color: $lightgray;
-    color: $darkgray;
-
-    h3 {
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin: 0 0;
-    }
-}
-
-.med-header3 {
-    padding: 0.5em 2em;
-    background-color: $lightergray;
-    color: $darkgray;
-
-    h4 {
-        margin: 0;
-    }
-
-    }
-
-section {
-    padding: 0 2em;
-
-    h4 {
-        margin-top: 2em;
-        border-bottom: 1px solid $lightergray;
-    }
-}
