@@ -65,11 +65,14 @@
         border-radius: $radius;
     }
 
-    @mixin font-size($size: 1.8) {
+    @mixin font-size($size: 1.8, $line_height: null) {
       font-size: ($size * 10) + px;
       font-size: $size + rem;
-      line-height: (1.618 * $size * 10) + px;
-      line-height: (1.618 * $size) + rem;
+      @if $line_height == null {
+          $line_height: 1.618 * $size;
+      }
+      line-height: ($line_height * 10) + px;
+      line-height: $line_height + rem;
     }
 
 
@@ -159,7 +162,7 @@
         &:visited {color: $blue;}
         &:focus,
         &:visited,
-        &:hover {color: darken(lightblue, 10%);}
+        &:hover {color: $blue;}
         &:active {outline: none;}
     }
 
@@ -257,6 +260,11 @@
             &.success { background-color: $success; }
             &.error { background-color: $error; }
             &.warning { background-color: $warning; }
+            &.light { 
+                background-color: white;
+                border:1px solid $lightgray;
+                color:$gray;
+            }
 
             // Sub-types
             &.reputation {
