@@ -198,6 +198,12 @@
 -   Include examples
 */
 
+.pure-u-3-10, .pure-u-7-10 {
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
     .site-grid {
         &>* {
             padding:1em;
