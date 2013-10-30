@@ -313,6 +313,10 @@
             &.success { background-color: $success; }
             &.error { background-color: $error; }
             &.warning { background-color: $warning; }
+            &.ignore {
+              background-color: #000;
+              border: 1px solid white;
+            }
             &.light { 
                 background-color: white;
                 border:1px solid $lightgray;
