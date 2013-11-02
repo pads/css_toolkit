@@ -192,6 +192,11 @@
     .relative {
         position:relative;
     }
+    .ellipsis {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
 // --------------------------------------------
 // ------------>>>   2. Grids   <<<------------
 // --------------------------------------------
@@ -227,6 +232,9 @@
     }
     .right-column { padding: 3rem 0 2rem 2rem }
     .middle-column { padding: 3rem }
+
+    .border-left { border-left:1px solid $lightergray; }
+    .border-right { border-right:1px solid $lightergray; }
 // --------------------------------------------
 // ----------->>>   3. Elements   <<<----------
 // --------------------------------------------
