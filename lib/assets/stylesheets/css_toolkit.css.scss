@@ -16,6 +16,7 @@
     $verydarkblue: #1f2326;
 
     // Grays
+    $backgroundgray: #f9f9f9;
     $lightergray: #d5d6db;
     $lightgray: #c9cacc;
     $gray: #808183;
@@ -205,27 +206,31 @@
 
     .site-grid {
         &>* {
-            padding:1em;
+            padding:1rem;
         }
     }
 
 
-    .buffer-top { margin-top: 1em }
-    .buffer-right { margin-right: 1em }
-    .buffer-bottom { margin-bottom: 1em }
-    .buffer-left { margin-left: 1em }
+    .buffer-top { margin-top: 1rem }
+    .buffer-right { margin-right: 1rem }
+    .buffer-bottom { margin-bottom: 1rem }
+    .buffer-left { margin-left: 1rem }
 
-    .pad { padding:1em }
-    .pad-top { padding-top: 1em }
-    .pad-right { padding-right: 1em }
-    .pad-bottom { padding-bottom: 1em }
-    .pad-left { padding-left: 1em }
+    .pad { padding:1rem }
+    .pad-top { padding-top: 1rem }
+    .pad-right { padding-right: 1rem }
+    .pad-bottom { padding-bottom: 1rem }
+    .pad-left { padding-left: 1rem }
 
-    .pad-2 { padding:1em }
-    .pad-top-2 { padding-top: 2em }
-    .pad-right-2 { padding-right: 2em }
-    .pad-bottom-2 { padding-bottom: 2em }
-    .pad-left-2 { padding-left: 2em }
+    .pad-2 { padding:2rem }
+    .pad-top-2 { padding-top: 2rem }
+    .pad-right-2 { padding-right: 2rem }
+    .pad-bottom-2 { padding-bottom: 2rem }
+    .pad-left-2 { padding-left: 2rem }
+
+    .pad-left-column { padding: 2rem 2rem 2rem 0}
+    .pad-right-column { padding: 2rem 0 2rem 2rem}
+    .pad-middle-column { padding: 2rem}
 // --------------------------------------------
 // ----------->>>   3. Elements   <<<----------
 // --------------------------------------------
@@ -279,12 +284,12 @@
             &.reputation {
                 background-color: $orange1;
                 border-radius:25px;
-                padding:5px 1em;
+                padding:5px 1rem;
             }
             &.badge {
                 background-color: $darkblue;
                 border-radius:25px;
-                padding:5px 1em;
+                padding:5px 1rem;
             }
         }
 
@@ -342,7 +347,7 @@
         .med-prominent {
             background-color: #ffffeb;
             border: 1px solid #e9e9d7;
-            padding: 1em 1.5em;
+            padding: 1rem 1.5em;
         }
 
         h1,h2,h3,h4,h5,h6 {
@@ -356,7 +361,7 @@
         h5 { @include font-size(2.0); }
         h6 { @include font-size(1.9); }
 
-        p { margin-bottom:1em; }
+        p { margin-bottom:1rem; }
     }
 
     // Uncategorized
@@ -367,10 +372,10 @@
     }
 
     section {
-        padding: 0 2em;
+        padding: 0 2rem;
 
         h4 {
-            margin-top: 2em;
+            margin-top: 2rem;
             border-bottom: 1px solid $lightergray;
         }
     }
