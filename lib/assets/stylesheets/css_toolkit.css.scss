@@ -338,6 +338,9 @@
                 background-color: $orange1;
                 border-radius:25px;
                 padding:5px 1rem;
+                &.xsmall {
+                    padding:3px 12px 3px 6px;
+                }
             }
             &.badge {
                 background-color: $darkblue;
