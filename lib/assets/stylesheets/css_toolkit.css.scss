@@ -49,7 +49,10 @@
     $light: #8a8a8a;
     $really-light: #b6b6b6;
 
-// Control Variables
+    // Semantic colors (USE THESE, NOT THE RAW COLOURS)
+    $border-color: $lightergray;
+
+    // Control Variables
     $fixed-width: 800px;
     $font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
 
@@ -181,6 +184,10 @@
         font-style:normal;
     }
 
+    p {
+        margin:1rem 0;
+    }
+
     textarea {
         resize: none;
         vertical-align:baseline;
@@ -188,7 +195,7 @@
             outline:none;
         }
     }
-    
+
     .relative {
         position:relative;
     }
@@ -256,8 +263,8 @@
         .pad-left-3 { padding-left: 3rem }
      */
 
-    /*.left-column { 
-        padding-top: 3rem; 
+    /*.left-column {
+        padding-top: 3rem;
         &>.pad {
             padding-left:0px;
             &:first-child {
@@ -303,7 +310,10 @@
             &.disabled { background-color: $disabled; }
 
             // Sizes
-            &.xsmall { font-size: 70%; }
+            &.xsmall { 
+                font-size: 70%; 
+                padding: 5px 11px;
+            }
             &.small { font-size: 85%; }
             &.large { font-size: 110%; }
             &.xlarge { font-size: 125%; }
@@ -317,7 +327,7 @@
               background-color: #000;
               border: 1px solid white;
             }
-            &.light { 
+            &.light {
                 background-color: white;
                 border:1px solid $lightgray;
                 color:$gray;
