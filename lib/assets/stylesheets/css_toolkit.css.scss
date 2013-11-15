@@ -27,10 +27,11 @@
     // Greens
     $lightergreen: #a9fc5b;
     $lightgreen: #87ed27;
-    $green: #59a80f; // Prmeium Green
+    $green: #59a80f; //
     $darkgreen: #3f760c;
     $darkergreen: #274807;
     $verydarkgreen: #182c05;
+    $premium: #47a632;
 
     // Orange
     $orange1: #f26522;
@@ -330,6 +331,10 @@
                 background-color: white;
                 border:1px solid $lightgray;
                 color:$gray;
+            }
+            &.premium {
+                background-color: $premium;
+                color: #fff;
             }
 
             // Sub-types
