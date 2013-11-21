@@ -137,6 +137,8 @@
         font-weight: 400;
         font-size: 62.5%;
         letter-spacing: 0px;
+        -webkit-font-smoothing: antialiased !important;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.0004);
     }
 
     body {
